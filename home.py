@@ -281,7 +281,8 @@ tab1, tab2, tab3 = st.tabs(
 )
 
 with tab1:
-    st.subheader("KPIs")
+    # st.subheader("KPIs")
+    st.markdown("""<h3 class="sub">KPIs</h3>""", unsafe_allow_html=True)
     cols = st.columns(5)
 
     with cols[0]:
@@ -305,7 +306,11 @@ with tab1:
 
     st.divider()
 
-    st.subheader("Monthly Trend: Registered vs Resolved Cases")
+    # st.subheader("Monthly Trend: Registered vs Resolved Cases")
+    st.markdown(
+        """<h3 class="sub">Monthly Trend: Registered vs Resolved Cases</h3>""",
+        unsafe_allow_html=True,
+    )
     st.plotly_chart(trend_line, use_container_width=True)
 
     st.divider()
@@ -314,12 +319,22 @@ with tab1:
     col1.subheader("Distribution of Registered Cases by Priority")
     col1.plotly_chart(priority_pie, use_container_width=True)
 
-    col2.subheader("Top 10 Distress Categories by Frequency")
+    # col2.subheader("Top 10 Distress Categories by Frequency")
+    st.markdown(
+        """<h3 class="sub">Top 10 Distress Categories by Frequency</h3>""",
+        unsafe_allow_html=True,
+    )
+
     col2.dataframe(distress_summary, use_container_width=True)
 
     st.divider()
 
-    st.subheader("Aging Distribution of Pending Cases")
+    # st.subheader("Aging Distribution of Pending Cases")
+    st.markdown(
+        """<h3 class="sub">Aging Distribution of Pending Cases</h3>""",
+        unsafe_allow_html=True,
+    )
+
     col1, col2 = st.columns([2, 1], gap="large")
 
     col1.plotly_chart(aging_bar, use_container_width=True)

@@ -201,7 +201,7 @@ def process_date_ranges(scenario, max_date, min_date):
     #         <div class="simpleText">
     #             <p>Comparison:</p>
     #             <p class="textBlak">{prev_start.strftime("%b %d, %Y")} - {prev_end.strftime("%b %d, %Y")}</p>
-    #         </div>    
+    #         </div>
     #         """,
     #         unsafe_allow_html=True,
     #     )
@@ -338,9 +338,7 @@ def create_sidebar(df_issues, df_date, min_date_raw, max_date_raw):
     )
 
     st.sidebar.markdown("<hr>", unsafe_allow_html=True)
-    st.sidebar.markdown(
-        "<div class='sidebar-section-title'>Filters</div>", unsafe_allow_html=True
-    )
+    # st.sidebar.markdown("<div class='sidebar-section-title'>Filters</div>", unsafe_allow_html=True)
 
     # Time period selector
     scenario = st.sidebar.selectbox(
